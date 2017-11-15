@@ -4,9 +4,9 @@ subprojects {
 	        jcenter()
 	    }
 	    
-    apply plugin: 'java'
+    apply plugin: ''
     
 	dependencies {
-	    testCompile 'junit:junit:4.12'
+	     'junit:junit:4.12'
 	}    
 }

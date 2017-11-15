@@ -12,18 +12,14 @@ import com.example.lib.retrofit.StudentRetrofitApi;
 public class Application {
 	private static final String HTTP_URL = "http://localhost:8080";
 
-	public static void main(String[] args) {
-		StudentApi api = new StudentRetrofitApi(HTTP_URL);
-		new Application().execute(api);
-	}
-
 	/**
 	 * Main-Method
-	 * @param api StudentAPI Object
+	 * @param args arguments from command-line
 	 */
-	void execute(StudentApi api) {
+	public static void main(String[] args) {
 		System.out.println("WebClient Application Start");
 		String suffix = "07";
+		StudentApi api = new StudentRetrofitApi(HTTP_URL);
 		
 		//$ curl http://localhost:8080/api/students -v -X POST -H "Content-Type: application/json" -d "{\"firstName\" : \"aaaaa\", \"lastName\" : \"bbbbb3\"}"
 		api.PostStudent(new Student(null, "student_first_name_" + suffix, "student_last_name_" + suffix));
@@ -33,8 +29,8 @@ public class Application {
 
 		System.out.println("WebClient Application Finish");
 	}
-	
-	private void display(String msg, Student student) {
+
+	private static void display(String msg, Student student) {
 		System.out.println(msg + " : Student Info ->" + student.getId() + ", " + student.getFirstName() + " " + student.getLastName());
 	}
 }
