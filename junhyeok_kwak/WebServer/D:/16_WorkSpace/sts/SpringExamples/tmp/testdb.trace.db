@@ -1,0 +1,33 @@
+2017-11-16 17:02:05 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeok_kwak' (32)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:03:23 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeok_kwak' (32)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:04:20 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeok_kwak' (32)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:04:31 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeok_kwak' (32)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:05:28 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeok_kwak' (32)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:05:44 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeok_kwak' (32)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:06:55 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeok_kwak' (32)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:07:27 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeokkwak' (31)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:07:38 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeokkwak' (31)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:08:16 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeokkwak' (31)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
+2017-11-16 17:10:37 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "FIRST_NAME VARCHAR(30)": "'student_first_name_junhyeokkwak' (31)"; SQL statement:
+INSERT INTO students (FIRST_NAME, LAST_NAME) VALUES(?, ?) [22001-196]
