@@ -10,7 +10,8 @@ import com.example.lib.retrofit.StudentRetrofitApi;
  *
  */
 public class Application {
-	private static final String HTTP_URL = "http://localhost:8080";
+//	private static final String HTTP_URL = "http://localhost:8080";
+	private static final String HTTP_URL = "http://ec2-52-79-81-133.ap-northeast-2.compute.amazonaws.com:8080";
 
 	/**
 	 * Main-Method
@@ -18,7 +19,7 @@ public class Application {
 	 */
 	public static void main(String[] args) {
 		System.out.println("WebClient Application Start");
-		String suffix = "07";
+		String suffix = "12345678912";
 		StudentApi api = new StudentRetrofitApi(HTTP_URL);
 		
 		//$ curl http://localhost:8080/api/students -v -X POST -H "Content-Type: application/json" -d "{\"firstName\" : \"aaaaa\", \"lastName\" : \"bbbbb3\"}"
