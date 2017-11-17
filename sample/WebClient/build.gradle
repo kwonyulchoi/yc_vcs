@@ -1,0 +1,12 @@
+
+subprojects {
+	repositories {
+	        jcenter()
+	    }
+	    
+    apply plugin: ''
+    
+	dependencies {
+	     'junit:junit:4.12'
+	}    
+}

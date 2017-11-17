@@ -1,0 +1,4 @@
+dependencies {
+	compile group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.1.0'
+    	compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+}
