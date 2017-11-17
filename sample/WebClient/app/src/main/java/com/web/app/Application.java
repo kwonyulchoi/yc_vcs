@@ -19,7 +19,8 @@ public class Application {
 	 */
 	public static void main(String[] args) {
 		System.out.println("WebClient Application Start");
-		String suffix = "12345678912";
+
+		String suffix = "07";
 		StudentApi api = new StudentRetrofitApi(HTTP_URL);
 		
 		//$ curl http://localhost:8080/api/students -v -X POST -H "Content-Type: application/json" -d "{\"firstName\" : \"aaaaa\", \"lastName\" : \"bbbbb3\"}"

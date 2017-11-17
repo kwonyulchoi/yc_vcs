@@ -1,7 +1,7 @@
-apply plugin: ''
+apply plugin: 'application'
 
-mainClassName = ''
+mainClassName = 'com.web.app.Application'
 
 dependencies {
-	compile project('')
+	compile project(':lib') 
 }
