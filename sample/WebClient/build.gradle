@@ -4,7 +4,7 @@ subprojects {
 	        jcenter()
 	    }
 	    
-    apply plugin: ''
+    apply plugin: 'java'
     
 	dependencies {
 	     'junit:junit:4.12'
