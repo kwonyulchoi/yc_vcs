@@ -10,14 +10,21 @@ import com.example.lib.retrofit.StudentRetrofitApi;
  *
  */
 public class Application {
-//	private static final String HTTP_URL = "http://localhost:8080";
-	private static final String HTTP_URL = "http://ec2-52-79-81-133.ap-northeast-2.compute.amazonaws.com:8080";
+	String HTTP_URL = "http://ec2-52-79-81-133.ap-northeast-2.compute.amazonaws.com:8080";
 
 	/**
 	 * Main-Method
 	 * @param args arguments from command-line
 	 */
 	public static void main(String[] args) {
+		new Application().run(args);
+	}
+
+	private void display(String msg, Student student) {
+		System.out.println(msg + " : Student Info ->" + student.getId() + ", " + student.getFirstName() + " " + student.getLastName());
+	}
+	
+	boolean run(String[] args) {
 		System.out.println("WebClient Application Start");
 
 		String suffix = "07";
@@ -30,9 +37,6 @@ public class Application {
 		api.getStudents().forEach((student) -> {display("GetStudents : ", student);});
 
 		System.out.println("WebClient Application Finish");
-	}
-
-	private static void display(String msg, Student student) {
-		System.out.println(msg + " : Student Info ->" + student.getId() + ", " + student.getFirstName() + " " + student.getLastName());
+		return true;
 	}
 }
