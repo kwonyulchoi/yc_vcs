@@ -1,0 +1,20 @@
+
+subprojects {
+	repositories {
+	        jcenter()
+	    }
+	    
+    apply plugin: 'java'
+    apply plugin: 'jacoco'
+    
+    jacocoTestReport {
+	    reports {
+	        xml.enabled true
+	        csv.enabled false
+	        html.destination file("${buildDir}/jacocoHtml")
+	    }
+	}
+	dependencies {
+	     testCompile 'junit:junit:4.12'
+	}    
+}
