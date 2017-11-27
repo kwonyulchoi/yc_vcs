@@ -14,7 +14,7 @@ public class StudentRunner {
 		api = new StudentRetrofitApi(HTTP_URL);
 	}
 		
-	public void run(String firstName, String lastName) {
+	public Boolean run(String firstName, String lastName) {
 		//$ curl http://localhost:8080/api/students/3 -v -X GET
 		api.getStudents().forEach((student) -> {display("get students : ", student);});
 		
@@ -24,10 +24,15 @@ public class StudentRunner {
 				
 		api.getStudents().forEach((student) -> {display("get students : ", student);});
 		
-		Boolean delete = api.deleteStudent(newStudent.getId());
-		System.out.println("delete student : " + delete);
-		
-		api.getStudents().forEach((student) -> {display("get students : ", student);});
+		if (newStudent != null && newStudent.getId() > 0) {
+			Boolean delete = api.deleteStudent(newStudent.getId());
+			System.out.println("delete student : " + delete);
+			
+			api.getStudents().forEach((student) -> {display("get students : ", student);});
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	private void display(String msg, Student student) {
