@@ -1,8 +1,6 @@
 package com.web.app;
 
-import com.example.lib.Student;
-import com.example.lib.StudentApi;
-import com.example.lib.retrofit.StudentRetrofitApi;
+import java.util.Arrays;
 
 /**
  * Main-Entry Point Class
@@ -10,29 +8,25 @@ import com.example.lib.retrofit.StudentRetrofitApi;
  *
  */
 public class Application {
-//	private static final String HTTP_URL = "http://localhost:8080";
-	private static final String HTTP_URL = "http://ec2-52-79-81-133.ap-northeast-2.compute.amazonaws.com:8080";
-
+	
 	/**
-	 * Main-Method
-	 * @param args arguments from command-line
+	 * Main Entry Point Method
+	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("WebClient Application Start");
-
-		String suffix = "07";
-		StudentApi api = new StudentRetrofitApi(HTTP_URL);
+		System.out.println("WebClient Application Start -> " + args.length);
 		
-		//$ curl http://localhost:8080/api/students -v -X POST -H "Content-Type: application/json" -d "{\"firstName\" : \"aaaaa\", \"lastName\" : \"bbbbb3\"}"
-		api.PostStudent(new Student(null, "student_first_name_" + suffix, "student_last_name_" + suffix));
+		Arrays.asList(args).forEach((arg) -> {System.out.println("arg->" + arg);});
 		
-		//$ curl http://localhost:8080/api/students/3 -v -X GET
-		api.getStudents().forEach((student) -> {display("GetStudents : ", student);});
+		StudentRunner runner = new StudentRunner();
+		if (args.length >= 2) {
+			runner.run(args[0], args[1]);
+		} else {
+			runner.run("Aaa", "Bbbb");	
+		}
 
 		System.out.println("WebClient Application Finish");
 	}
 
-	private static void display(String msg, Student student) {
-		System.out.println(msg + " : Student Info ->" + student.getId() + ", " + student.getFirstName() + " " + student.getLastName());
-	}
+	
 }

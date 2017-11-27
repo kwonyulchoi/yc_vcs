@@ -13,10 +13,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class StudentRetrofitApi implements StudentApi {
 	
-	public static class Aaa {
-		
-	}
-
 	private RetrofitApi retrofitApi;
 	
 	public StudentRetrofitApi(String serverAddress) {
@@ -54,5 +50,20 @@ public class StudentRetrofitApi implements StudentApi {
 		}
 		
 		return result;
+	}
+
+	@Override
+	public Boolean deleteStudent(Integer id) {
+		Boolean result = false;
+		Call<Boolean> delete = retrofitApi.deleteStudent(id);
+		
+		try {
+			Response<Boolean> execute = delete.execute();			
+			result = execute.body();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return result == null ? false : result;
 	}	
 }
