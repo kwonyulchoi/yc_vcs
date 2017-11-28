@@ -22,7 +22,7 @@ public class Application {
 		if (args.length >= 2) {
 			runner.run(args[0], args[1]);
 		} else {
-			runner.run("Aaa", "Bbbb");	
+			System.out.println("No arguments");	
 		}
 
 		System.out.println("WebClient Application Finish");

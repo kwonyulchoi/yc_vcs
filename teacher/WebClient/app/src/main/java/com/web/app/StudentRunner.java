@@ -13,18 +13,23 @@ public class StudentRunner {
 	public StudentRunner() {
 		api = new StudentRetrofitApi(HTTP_URL);
 	}
+	
+	StudentRunner(StudentApi api) {
+		this.api = api;
+	}
 		
 	public Boolean run(String firstName, String lastName) {
 		//$ curl http://localhost:8080/api/students/3 -v -X GET
 		api.getStudents().forEach((student) -> {display("get students : ", student);});
 		
 		//$ curl http://localhost:8080/api/students -v -X POST -H "Content-Type: application/json" -d "{\"firstName\" : \"aaaaa\", \"lastName\" : \"bbbbb3\"}"
-		Student newStudent = api.PostStudent(new Student(null, firstName, lastName));
+		Student newStudent = api.postStudent(new Student(null, firstName, lastName));
 		System.out.println("post student : " + newStudent);
 				
 		api.getStudents().forEach((student) -> {display("get students : ", student);});
 		
 		if (newStudent != null && newStudent.getId() > 0) {
+			//$ curl http://localhost:8080/api/students/3 -v -X DELETE
 			Boolean delete = api.deleteStudent(newStudent.getId());
 			System.out.println("delete student : " + delete);
 			
@@ -35,7 +40,7 @@ public class StudentRunner {
 		}
 	}
 	
-	private void display(String msg, Student student) {
+	void display(String msg, Student student) {
 		System.out.println(msg + " : Student Info ->" + student.getId() + ", " + student.getFirstName() + " " + student.getLastName());
 	}
 }

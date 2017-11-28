@@ -15,8 +15,8 @@ import com.example.lib.Student;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class StudentRetrofitApiTest {
 
-//	String HTTP_URL = "http://localhost:8080";
-	String HTTP_URL = "http://ec2-52-79-81-133.ap-northeast-2.compute.amazonaws.com:8080";
+	String HTTP_URL = "http://localhost:8080";
+//	String HTTP_URL = "http://ec2-52-79-81-133.ap-northeast-2.compute.amazonaws.com:8080";
 	
 	private static int tempId;
 	private StudentRetrofitApi api;
@@ -49,7 +49,7 @@ public class StudentRetrofitApiTest {
 	public void TC02_postStudent() {
 		Student student = new Student(null, "AaaTC", "BbbTC");
 		
-		Student actual = api.PostStudent(student);
+		Student actual = api.postStudent(student);
 		
 		assertNotNull(actual);
 		assertTrue(actual.getId() >= 1);		

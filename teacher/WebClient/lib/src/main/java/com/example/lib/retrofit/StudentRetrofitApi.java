@@ -38,7 +38,7 @@ public class StudentRetrofitApi implements StudentApi {
 	}
 
 	@Override
-	public Student PostStudent(Student student) {
+	public Student postStudent(Student student) {
 		Student result = null;
 		Call<Student> post = retrofitApi.postStudent(student);
 		
