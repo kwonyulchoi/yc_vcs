@@ -16,7 +16,7 @@ public class HelloCalculatorTest {
 	@Before
 	public void setUp() {
 		input1 = 1;
-		input2 = 2;
+		input2 = 3;
 		calculator = new HelloCalculator();		
 	}
 	
@@ -56,6 +56,18 @@ public class HelloCalculatorTest {
 		
 		//Assert
 		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void add03() {
+		//Arrange
+		expected = 4;
+		
+		//Act
+		actual = calculator.add(input1, input2);
+		
+		//Assert
+		assertEquals("Add : " + input1 + " + " + input2 + " = " + actual + ", expected -> " + expected, expected, actual);
 	}
 
 	@Test
