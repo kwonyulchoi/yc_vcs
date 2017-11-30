@@ -1,0 +1,38 @@
+package com.example.calculator;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
+public class HelloCalculator05Test {
+	private int input1 = 1;
+	private int input2  = 0;
+	
+	private HelloCalculator calculator;
+	
+	@Before
+	public void setUp() {
+
+		calculator = new HelloCalculator();
+	}
+	
+	@Ignore
+	@Test
+	public void testDivide()
+	{
+		int expected = 1;
+		int actual = calculator.divide(input1, input2);
+		assertEquals(expected,actual);
+	}
+	@Test(expected = ArithmeticException.class)
+	public void divideWithException() throws Exception{
+		
+		int expected = 1;
+		int actual = calculator.divide(input1, input2);
+		assertEquals(expected,actual);
+	}
+
+
+}
