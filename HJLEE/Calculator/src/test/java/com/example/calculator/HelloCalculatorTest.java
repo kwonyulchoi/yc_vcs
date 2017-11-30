@@ -21,9 +21,11 @@ public class HelloCalculatorTest {
 		assertEquals(3, new HelloCalculator().multiply(1, 3));
 	}
 
-	@Test
+	@Test(expected = ArithmeticException.class)
 	public void testDivide() {
-		assertEquals(0, new HelloCalculator().divide(1, 3));
+		int expected = 1;
+		int actual = cal culator.divide(input1, input2);
+		assertEquals(expected,actual);
 	}
 
 }
