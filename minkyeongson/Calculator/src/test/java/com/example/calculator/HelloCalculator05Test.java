@@ -1,13 +1,12 @@
 package com.example.calculator;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class HelloCalculator02Test {
-	
+public class HelloCalculator05Test {
 	private int input1;
 	private int input2;
 	private long expected;	
@@ -36,9 +35,14 @@ public class HelloCalculator02Test {
 		assertEquals(expected, actual);
 	}
 	
-	public void divide() throws Exception {
+	@Test(expected = ArithmeticException.class)
+	public void divideWithException() throws Exception {
+		input1 = 1;
+		input2 = 0;
 		expected = 0;
-		actual = calculator.divide(input1,  input2);
+		
+		actual = calculator.divide(input1, input2);
+		
 		assertEquals(expected, actual);
 	}
 }
