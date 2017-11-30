@@ -1,0 +1,5 @@
+sudo apt-get purge eclipse*
+rm -r ~/.eclipse/
+
+
+sudo apt-get autoremove eclipse --purge
