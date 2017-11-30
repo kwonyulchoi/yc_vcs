@@ -28,7 +28,7 @@ public class HelloCalculator03Test {
 	@Test
 	public void testAdd() {
 		//Arrange
-		expected = 4;
+		expected = 0;
 		
 		//Act
 		actual = calculator.add(input1, input2);
