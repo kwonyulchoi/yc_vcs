@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class HelloCalculator02Test {
+public class HelloCalcluator05Test {
 	private int input1;
 	private int input2;
 	private long expected;
@@ -15,8 +15,8 @@ public class HelloCalculator02Test {
 	
 	@Before
 	public void setUp() {
-		input1 = 1;
-		input2 = 3;
+		//input1 = 1;
+		//input2 = 3;
 		calculator = new HelloCalculator();
 	}
 	
@@ -25,21 +25,17 @@ public class HelloCalculator02Test {
 		calculator = null;
 	}
 	
-	@Test
-	public void add() throws Exception{
+	@Test(expected = ArithmeticException.class)
+	public void divideWithException() throws Exception{
 		//Arrange
+		input1 = 1;
+		input2 = 0;
 		expected = 0;
 		
 		//Act
-		int actual = calculator.add(input1, input2);
+		actual = calculator.divide(input1, input2);
 		
 		//Assert
-		//assertEquals(expected, actual);
-		
-		//Assertion Message
-		assertEquals("Add Max Integer Values : " + input1 + " + " + input2 + " = " + actual + ", expected -> " + expected
-						, expected, actual);
-		
+		assertEquals(expected, actual);
 	}
-	
 }
