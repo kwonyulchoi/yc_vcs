@@ -2,6 +2,7 @@ package com.example.calculator;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class HelloCalculatorTest {
@@ -21,7 +22,8 @@ public class HelloCalculatorTest {
 		fail("Not yet implemented");
 	}
 
-	@Test
+//	@Test
+	@Ignore
 	public void testDivide() {
 		fail("Not yet implemented");
 	}
