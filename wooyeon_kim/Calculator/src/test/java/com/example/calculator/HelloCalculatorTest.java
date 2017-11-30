@@ -25,5 +25,4 @@ public class HelloCalculatorTest {
 	public void testDivide() {
 		fail("Not yet implemented");
 	}
-
 }
