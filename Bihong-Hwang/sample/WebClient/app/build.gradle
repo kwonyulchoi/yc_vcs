@@ -1,0 +1,15 @@
+apply plugin: 'application'
+
+def appMainClass = 'com.web.app.Application'
+
+mainClassName = appMainClass
+
+dependencies {
+	compile project(':lib') 
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': appMainClass
+    }
+}
