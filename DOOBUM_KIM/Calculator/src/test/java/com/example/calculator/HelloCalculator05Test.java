@@ -3,6 +3,7 @@ package com.example.calculator;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class HelloCalculator05Test {
@@ -17,6 +18,7 @@ public class HelloCalculator05Test {
 		calculator = new HelloCalculator();
 	}
 	
+	@Ignore
 	@Test
 	public void testDivide()
 	{
