@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class HelloCalculator02Test2 {
+public class HelloCalculator05Test5 {
 
 	
 	private int input = 1;
@@ -19,8 +19,8 @@ public class HelloCalculator02Test2 {
 	@Before
 	 public void setup(){
 		 
-		 input = 1;
-		 input2 = 3;
+		 input = 2;
+		 input2 = 0;
 		 
 		 calculator = new HelloCalculator();		
 	 }
@@ -31,12 +31,12 @@ public class HelloCalculator02Test2 {
 		 calculator = null;		
 	 }
 	
-	@Test
-	 public void add() throws Exception {
+	@Test(expected = ArithmeticException.class)
+	 public void divide() throws Exception {
 		
-		expected = 4;
+		expected = 0;
 		 
-		actual = calculator.add(input, input2);
+		actual = calculator.divide(input, input2);
 		 
 		assertEquals("Message : " + input + " + " + input2 + " = " + actual + " , expected -> " + expected  ,
 				expected, actual);
