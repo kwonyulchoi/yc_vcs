@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'jacoco'
+apply plugin: 'findbugs'
 
 //compileJava.options.encoding = 'UTF-8'
 //compileTestJava.options.encoding = 'UTF-8'
@@ -21,7 +22,13 @@ jacocoTestReport {
     }
 }
 
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled false
+        html.enabled true        
+    }
+}
+
 tasks.withType(Test) {
     ignoreFailures=true;
 }
-
