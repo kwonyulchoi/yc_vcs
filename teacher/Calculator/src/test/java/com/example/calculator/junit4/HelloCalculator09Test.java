@@ -20,17 +20,17 @@ public class HelloCalculator09Test {
 
         public int subtract(int input1, int input2) {
             counter++;
-            return subtract(input1, input2);
+            return super.subtract(input1, input2);
         }
 
         public int multiply(int input1, int input2) {
             counter++;
-            return multiply(input1, input2);
+            return super.multiply(input1, input2);
         }
 
         public int divide(int input1, int input2) {
             counter++;
-            return divide(input1, input2);
+            return super.divide(input1, input2);
         }
     }
 
