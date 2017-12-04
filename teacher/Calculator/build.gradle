@@ -24,6 +24,7 @@ jacocoTestReport {
 
 tasks.withType(FindBugs) {
     reports {
+    	//ignoreFailures=true;
         xml.enabled true
         html.enabled false        
     }

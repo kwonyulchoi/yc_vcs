@@ -25,12 +25,12 @@ public class HelloCalculator09Test {
 
         public int multiply(int input1, int input2) {
             counter++;
-            return super.multiply(input1, input2);
+            return multiply(input1, input2);
         }
 
         public int divide(int input1, int input2) {
             counter++;
-            return super.divide(input1, input2);
+            return divide(input1, input2);
         }
     }
 
