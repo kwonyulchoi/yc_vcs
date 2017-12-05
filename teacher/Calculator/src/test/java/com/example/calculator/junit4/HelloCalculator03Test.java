@@ -26,6 +26,11 @@ public class HelloCalculator03Test {
     public void tearDown() {
         calculator = null;
     }
+    
+    @Test
+    public void test1() {
+    	System.out.println("test");
+    }
 
     @Test
     public void add() throws Exception {
