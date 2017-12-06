@@ -26,4 +26,8 @@ public class HelloCalculator00Test {
     public void divide() throws Exception {
         assertEquals(0, new HelloCalculator().divide(1, 3));
     }
+    @Test
+    public void divide2() throws Exception {
+    	assertEquals(0, new HelloCalculator().divide(1, 3));
+    }
 }
