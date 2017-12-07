@@ -16,6 +16,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+test.outputs.upToDateWhen {
+	false
+}
+
 jacocoTestReport {
     reports {
         xml.enabled true
@@ -35,7 +39,7 @@ tasks.withType(FindBugs) {
 tasks.withType(Test) {
     ignoreFailures=true;
 }
-/*
+
 task deployZip(type: Zip) {
     from 'build/libs'
     from 'build/reports'
@@ -45,4 +49,4 @@ task deployZip(type: Zip) {
 	println relativePath(deployZip.destinationDir)
 	println relativePath(deployZip.archivePath)
 }
-*/
+
