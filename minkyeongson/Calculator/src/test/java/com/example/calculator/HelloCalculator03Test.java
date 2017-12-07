@@ -9,17 +9,18 @@ import org.junit.Test;
 public class HelloCalculator03Test {
 	private int input1;
 	private int input2;
-	private long expected;	
-	private long actual;
+	private int expected;	
+	private int actual;
 	private HelloCalculator calculator;
 	
 	
 	@Test
 	public void addMaxIntegerValue() throws Exception{
-		input1 = Integer.MAX_VALUE;
+		input1 = 1;
 		input2 = 5;
 		
-		expected = Integer.MAX_VALUE + 5L;
+		calculator = new HelloCalculator();
+		expected = 1 + 5;
 		
 		actual = calculator.add(input1, input2);
 		

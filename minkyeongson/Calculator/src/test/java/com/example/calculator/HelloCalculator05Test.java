@@ -28,7 +28,7 @@ public class HelloCalculator05Test {
 	
 	@Test
 	public void add() throws Exception{
-		expected = 0;
+		expected = 4;
 		
 		actual = calculator.add(input1, input2);
 		
