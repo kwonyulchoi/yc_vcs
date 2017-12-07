@@ -10,8 +10,8 @@ public class HelloCalculator02Test {
 	
 	private int input1;
 	private int input2;
-	private long expected;	
-	private long actual;
+	private int expected;	
+	private int actual;
 	private HelloCalculator calculator;
 	
 	@Before
@@ -29,7 +29,7 @@ public class HelloCalculator02Test {
 	
 	@Test
 	public void add() throws Exception{
-		expected = 0;
+		expected = 4;
 		
 		actual = calculator.add(input1, input2);
 		
