@@ -10,8 +10,8 @@ public class HelloCalculator02Test {
 	
 	private int input1;
 	private int input2;
-	private long expected;
-	private long actual;
+	private int expected;	
+	private int actual;
 	private HelloCalculator calculator;
 	
 	@Before
@@ -33,6 +33,12 @@ public class HelloCalculator02Test {
 		
 		actual = calculator.add(input1, input2);
 		
+		assertEquals(expected, actual);
+	}
+	
+	public void divide() throws Exception {
+		expected = 0;
+		actual = calculator.divide(input1,  input2);
 		assertEquals(expected, actual);
 	}
 }
