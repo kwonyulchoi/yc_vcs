@@ -6,11 +6,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class HelloCalculator02Test {
-	
+public class HelloCalculator03Test {
 	private int input1;
 	private int input2;
-	private long expected;	
+	private long expected;
 	private long actual;
 	private HelloCalculator calculator;
 	
@@ -18,7 +17,7 @@ public class HelloCalculator02Test {
 	public void setUp() {
 		input1 = 1;
 		input2 = 3;
-		calculator = new HelloCalculator();
+		calculator = new HelloCalculator();		
 	}
 	
 	@After
@@ -26,19 +25,15 @@ public class HelloCalculator02Test {
 		calculator = null;
 	}
 
-	
 	@Test
-	public void add() throws Exception{
+	public void testAdd() {
+		//Arrange
 		expected = 0;
 		
+		//Act
 		actual = calculator.add(input1, input2);
 		
-		assertEquals(expected, actual);
-	}
-	
-	public void divide() throws Exception {
-		expected = 0;
-		actual = calculator.divide(input1,  input2);
-		assertEquals(expected, actual);
+		//Assert
+		assertEquals("Add : " + input1 + " + " + input2 + " = " + actual + ", expected -> " + expected, expected, actual);
 	}
 }

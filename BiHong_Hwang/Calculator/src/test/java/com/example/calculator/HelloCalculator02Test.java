@@ -7,10 +7,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class HelloCalculator02Test {
-	
 	private int input1;
 	private int input2;
-	private long expected;	
+	private long expected;
 	private long actual;
 	private HelloCalculator calculator;
 	
@@ -18,7 +17,7 @@ public class HelloCalculator02Test {
 	public void setUp() {
 		input1 = 1;
 		input2 = 3;
-		calculator = new HelloCalculator();
+		calculator = new HelloCalculator();		
 	}
 	
 	@After
@@ -26,19 +25,16 @@ public class HelloCalculator02Test {
 		calculator = null;
 	}
 
-	
 	@Test
-	public void add() throws Exception{
-		expected = 0;
+	public void testAdd() {
+		//Arrange
+		expected = 4;
 		
+		//Act
 		actual = calculator.add(input1, input2);
 		
+		//Assert
 		assertEquals(expected, actual);
 	}
-	
-	public void divide() throws Exception {
-		expected = 0;
-		actual = calculator.divide(input1,  input2);
-		assertEquals(expected, actual);
-	}
+
 }
