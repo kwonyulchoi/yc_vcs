@@ -15,15 +15,18 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.12'
 }
-/*
+
 test.outputs.upToDateWhen {
 	false
 }
-*/
-tasks.withType(Test) {
-    ignoreFailures=true;
+
+test.outputs.upToDateWhen{
+	false
 }
 
+tasks.withType(Test){
+	ignoreFailures=true;
+}
 jacocoTestReport {
     reports {
         xml.enabled true
@@ -40,7 +43,9 @@ tasks.withType(FindBugs) {
     }
 }
 
-
+tasks.withType(Test) {
+    ignoreFailures=true;
+}
 
 task deployZip(type: Zip) {
     from 'build/libs'

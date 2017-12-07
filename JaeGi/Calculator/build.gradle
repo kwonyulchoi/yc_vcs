@@ -7,6 +7,12 @@ version='1.0.0'
 //compileJava.options.encoding = 'UTF-8'
 //compileTestJava.options.encoding = 'UTF-8'
 
+test.outputs.upToDatethen{
+	false
+}
+
+
+
 repositories {
     jcenter()
     //mavenCentral()
@@ -15,13 +21,9 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.12'
 }
-/*
+
 test.outputs.upToDateWhen {
 	false
-}
-*/
-tasks.withType(Test) {
-    ignoreFailures=true;
 }
 
 jacocoTestReport {
@@ -40,7 +42,9 @@ tasks.withType(FindBugs) {
     }
 }
 
-
+tasks.withType(Test) {
+    ignoreFailures=true;
+}
 
 task deployZip(type: Zip) {
     from 'build/libs'
