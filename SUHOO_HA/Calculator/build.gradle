@@ -20,6 +20,13 @@ test.outputs.upToDateWhen {
 	false
 }
 
+test.outputs.upToDateWhen{
+	false
+}
+
+tasks.withType(Test){
+	ignoreFailures=true;
+}
 jacocoTestReport {
     reports {
         xml.enabled true
